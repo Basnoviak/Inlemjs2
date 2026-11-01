@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogginlägg</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="post.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">Bloggnu</a>
+        <p>Blogginlägg och kommentarer</p>
+    </header>
+
+    <main class="container">
+
+        <a href="index.html">← Tillbaka till startsidan</a>
+
+        <p id="statusMessage" role="status"></p>
+        <p id="errorMessage" class="error-message" role="alert" hidden></p>
+        <p id="successMessage" class="success-message"
+           role="status" aria-live="polite"></p>
+
+        <section id="postContainer"></section>
+
+        <section id="editSection" class="form-section" hidden>
+            <h2>Redigera inlägg</h2>
+
+            <form id="editForm">
+                <label for="editTitle">Rubrik</label>
+                <input type="text" id="editTitle" required>
+
+                <label for="editBody">Innehåll</label>
+                <textarea id="editBody" rows="5" required></textarea>
+
+                <button type="submit">Spara</button>
+                <button type="button" id="putButton">
+                    Ersätt
+                </button>
+                <button type="button" id="cancelEdit">
+                    Avbryt
+                </button>
+            </form>
+        </section>
+
+        <section class="comments-section">
+            <h2>Kommentarer</h2>
+
+            <div id="commentsContainer"></div>
+
+            <h3>Skriv en kommentar</h3>
+
+            <form id="commentForm">
+                <label for="commentInput">Din kommentar</label>
+                <textarea id="commentInput" rows="4"
+                    placeholder="Skriv din kommentar..." required></textarea>
+
+                <button type="submit">Publicera kommentar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Bloggnu</p>
+    </footer>
+
+</body>
+</html>

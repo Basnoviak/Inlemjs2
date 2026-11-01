@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggnu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">Bloggnu</a>
+        <p>Tankar, berättelser och idéer.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <h1>Upptäck blogginlägg</h1>
+            <p>Läs, kommentera och dela dina tankar.</p>
+        </section>
+
+        <section class="controls">
+            <input type="search" id="searchInput"
+                placeholder="Sök efter inlägg...">
+
+            <select id="tagFilter">
+                <option value="">Alla taggar</option>
+            </select>
+
+            <select id="sortSelect">
+                <option value="default">Standardordning</option>
+                <option value="views">Flest visningar</option>
+                <option value="likes">Flest gillningar</option>
+                <option value="title">Rubrik A-Ö</option>
+            </select>
+        </section>
+
+        <p id="statusMessage" role="status"></p>
+        <p id="errorMessage" class="error-message" role="alert" hidden></p>
+
+        <section id="postsContainer" class="posts-grid"></section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Bloggnu</p>
+    </footer>
+
+</body>
+</html>

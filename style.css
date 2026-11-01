@@ -1,0 +1,237 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #202938;
+    line-height: 1.6;
+}
+
+.site-header {
+    background: #172554;
+    color: white;
+    padding: 24px 5%;
+}
+
+.logo {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-header p {
+    margin-bottom: 0;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.intro {
+    margin-bottom: 24px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls input,
+.controls select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 2px;
+    background: white;
+    font: inherit;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 12px rgb(15 23 42 / 5%);
+}
+
+.post-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.tag {
+    padding: 3px 9px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 0.8rem;
+}
+
+.post-details {
+    margin-top: auto;
+    color: #717376;
+    font-size: 1rem;
+}
+
+.read-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 2px;
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.read-button:hover {
+    background: #1e40af;
+}
+
+.error-message {
+    padding: 12px;
+    border: 1px solid #dc2626;
+    border-radius: 8px;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.site-footer {
+    padding: 20px;
+    background: #172554;
+    color: white;
+    text-align: center;
+}
+
+.form-section,
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-section form,
+.comments-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-section input,
+.form-section textarea,
+.comments-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    background: #1d4ed8;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    margin: 5px 5px 5px 0;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.delete-button {
+    background: #dc2626;
+}
+
+.delete-button:hover {
+    background: #991b1b;
+}
+
+.comment {
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.comment p {
+    margin-bottom: 0;
+}
+
+.success-message {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.error-message[hidden],
+.success-message:empty {
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .form-section,
+    .comments-section {
+        padding: 15px;
+    }
+
+    .post-card button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 92%;
+    }
+}
